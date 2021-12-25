@@ -88,7 +88,7 @@ $(".register-submit-btn").click(function(){
     var form = new FormData();
     form.append("Ngày đăng ký", new Date().toLocaleDateString("vi-VN"));
     form.append("Họ và tên", $("#fullname").val());
-    form.append("Ngày sinh", $("#birthday").val());
+    form.append("Ngày sinh", new Date($("#birthday").val()).toLocaleDateString("vi-VN"));
     form.append("Trường học", $("#school").val());
     form.append("Email", $("#email").val());
     form.append("Tên cuộc thi", document.querySelector('input[name="test-type"]:checked').value);
