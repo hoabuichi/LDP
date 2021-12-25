@@ -12,6 +12,10 @@
   }
 }
 
+main {
+  overflow: hidden;
+}
+
 header {
   background: #0F1B43;
   padding-top: 57px;
@@ -160,6 +164,22 @@ header {
   background: #0F1B43;
   padding-top: 100px;
   padding-bottom: 131px;
+  position: relative;
+
+  .banner-img {
+    position: absolute;
+    right: 0;
+    bottom: -130px;
+
+    @media(max-width: 1258px) {
+      bottom: -60px;
+      width: 600px;
+    }
+
+    @media(max-width: 1199px) {
+      display: none;
+    }
+  }
 
   @media(max-width: 768px) {
     padding-top: 50px;
@@ -196,6 +216,14 @@ header {
     width: 677px;
     margin-bottom: 32px;
 
+    @media(max-width: 1399px) {
+      width: 600px;
+    }
+
+    @media(max-width: 1199px) {
+      width: 677px;
+    }
+
     @media(max-width: 768px) {
       width: 100%;
       font-size: 30px;
@@ -214,6 +242,14 @@ header {
     opacity: 0.8;
     width: 685px;
     margin-bottom: 83px;
+
+    @media(max-width: 1399px) {
+      width: 500px;
+    }
+
+    @media(max-width: 1199px) {
+      width: 685px;
+    }
 
     @media(max-width: 768px) {
       width: 100%;
@@ -347,6 +383,41 @@ header {
 
 .exam-structure-container {
   padding-top: 188px;
+  position: relative;
+
+  .blur-bottom-left {
+    background: #5CA038;
+    opacity: 0.4;
+    filter: blur(200px);
+    width: 493px;
+    height: 469px;
+    position: absolute;
+    top: 200px;
+    right: -200px;
+  }
+
+  .blur-bottom-left-two {
+    width: 344px;
+    height: 327px;
+    background: #2EA5DB;
+    opacity: 0.4;
+    filter: blur(200px);
+    position: absolute;
+    top: 100px;
+    right: -100px;
+  }
+
+  .blur-center {
+    background: #F48020;
+    opacity: 0.4;
+    filter: blur(200px);
+    width: 212px;
+    height: 182px;
+    position: absolute;
+    top: 65px;
+    right: 50%;
+    transform: translateX(50%);
+  }
 
   @media(max-width: 768px) {
     padding-top: 0;
@@ -437,6 +508,29 @@ header {
 .levels-section-container {
   padding-top: 240px;
   padding-bottom: 160px;
+  position: relative;
+
+  .blur-bottom-left {
+    background: #5CA038;
+    opacity: 0.4;
+    filter: blur(200px);
+    width: 493px;
+    height: 469px;
+    position: absolute;
+    bottom: 200px;
+    left: -300px;
+  }
+
+  .blur-bottom-left-second {
+    width: 344px;
+    height: 327px;
+    background: #F48020;
+    opacity: 0.4;
+    filter: blur(200px);
+    position: absolute;
+    bottom: 470px;
+    left: -200px;
+  }
 
   @media(max-width: 768px) {
     padding-top: 50px;
@@ -506,7 +600,7 @@ header {
       }
 
       &.one {
-        background-image: url("./img/level1.png");
+        background-image: url("./img/level1.svg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -773,6 +867,51 @@ header {
 .register-container {
   padding-top: 243px;
   padding-bottom: 160px;
+  position: relative;
+
+  .blur-bottom-left {
+    background: #5CA038;
+    opacity: 0.4;
+    filter: blur(200px);
+    width: 493px;
+    height: 469px;
+    position: absolute;
+    bottom: 200px;
+    left: -200px;
+  }
+
+  .blur-bottom-left-second {
+    width: 344px;
+    height: 327px;
+    background: #2EA5DB;
+    opacity: 0.4;
+    filter: blur(200px);
+    position: absolute;
+    bottom: 477px;
+    left: -100px;
+  }
+
+  .blur-top-right {
+    background: #5CA038;
+    opacity: 0.4;
+    filter: blur(200px);
+    width: 493px;
+    height: 469px;
+    position: absolute;
+    top: -100px;
+    right: -200px;
+  }
+
+  .blur-top-right-second {
+    background: #F48020;
+    opacity: 0.4;
+    filter: blur(200px);
+    width: 344px;
+    height: 327px;
+    position: absolute;
+    top: -172px;
+    right: -200px;
+  }
 
   @media(max-width: 768px) {
     padding-top: 50px;
