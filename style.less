@@ -395,7 +395,7 @@ header {
 
   .blur-bottom-left {
     background: #5CA038;
-    opacity: 0.4;
+    opacity: 0.2;
     filter: blur(200px);
     width: 493px;
     height: 469px;
@@ -417,7 +417,7 @@ header {
     width: 344px;
     height: 327px;
     background: #2EA5DB;
-    opacity: 0.4;
+    opacity: 0.2;
     filter: blur(200px);
     position: absolute;
     top: 200px;
@@ -435,7 +435,7 @@ header {
 
   .blur-center {
     background: #F48020;
-    opacity: 0.4;
+    opacity: 0.3;
     filter: blur(200px);
     width: 212px;
     height: 182px;
@@ -481,7 +481,7 @@ header {
       }
       
       .text {
-        width: 354px;
+        width: 400px;
         margin-bottom: 0;
         font-size: 18px;
         line-height: 24px;
@@ -491,7 +491,7 @@ header {
   }
 
   .structure-table {
-    width: 532px;
+    width: 600px;
     height: 317px;
 
     @media(max-width: 768px) {
@@ -500,7 +500,7 @@ header {
     }
     
     table {
-      width: 532px;
+      width: 600px;
       height: 317px;
       box-shadow: 4px 4px 16px rgb(0 0 0 / 8%);
       border-radius: 24px;
@@ -518,12 +518,20 @@ header {
         font-size: 18px;
         line-height: 23px;
         color: #0F4C8B;
+
+        @media(max-width: 768px) {
+          font-size: 16px;
+        }
       }
 
       td {
         font-size: 18px;
         line-height: 23px;
         font-weight: bold;
+
+        @media(max-width: 768px) {
+          font-size: 16px;
+        }
 
         &:first-child {
           line-height: 24px;
@@ -542,7 +550,7 @@ header {
 
   .blur-bottom-left {
     background: #5CA038;
-    opacity: 0.4;
+    opacity: 0.2;
     filter: blur(200px);
     width: 493px;
     height: 469px;
@@ -559,7 +567,7 @@ header {
     width: 344px;
     height: 327px;
     background: #F48020;
-    opacity: 0.4;
+    opacity: 0.2;
     filter: blur(200px);
     position: absolute;
     bottom: 470px;
@@ -621,6 +629,8 @@ header {
         align-items: center;
         width: 202px;
         flex-shrink: 0;
+        z-index: 1;
+        position: relative;
 
         @media(max-width: 768px) {
           width: 153px;
@@ -632,16 +642,62 @@ header {
         flex-grow: 1;
         display: flex;
         align-items: center;
-        font-weight: bold;
-        font-size: 24px;
-        color: #333333;
       }
 
-      &.one {
-        background-image: url("./img/level1.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+      &.background {
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        .img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+        }
+
+        .backdrop {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background-color: black;
+          opacity: 0.3;
+        }
+
+        &.one, &.three {
+          .img, .backdrop {
+            left: 100%;
+            transition: left 0.3s;
+          }
+        }
+
+        &.two, &.four {
+          .img, .backdrop {
+            right: 100%;
+            transition: right 0.3s;
+          }
+        }
+
+        &:hover {
+
+          &.one, &.three {
+            .img, .backdrop {
+              left: 0;
+            }
+          }
+  
+          &.two, &.four {
+            .img, .backdrop {
+              right: 0;
+            }
+          }
+
+          .level-text {
+            .text {
+              color: #ffffff;
+            }
+          }
+        }
         .level-num {
           background: #E8F2FD;
         }
@@ -659,20 +715,10 @@ header {
             justify-content: center;
           }
 
-          .backdrop {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: black;
-            opacity: 0.3;
-          }
-
           .text {
             font-weight: bold;
             font-size: 24px;
-            color: #FFFFFF;
+            color: #333333;
             position: relative;
             z-index: 1;
             margin-bottom: 0;
@@ -865,6 +911,11 @@ header {
         margin-right: 16px;
       }
 
+      img {
+        width: 100%;
+        border-radius: 16px;
+      }
+
       .name {
         font-weight: bold;
         font-size: 18px;
@@ -909,7 +960,7 @@ header {
 
   .blur-bottom-left {
     background: #5CA038;
-    opacity: 0.4;
+    opacity: 0.2;
     filter: blur(200px);
     width: 493px;
     height: 469px;
@@ -926,7 +977,7 @@ header {
     width: 344px;
     height: 327px;
     background: #2EA5DB;
-    opacity: 0.4;
+    opacity: 0.2;
     filter: blur(200px);
     position: absolute;
     bottom: 477px;
@@ -939,7 +990,7 @@ header {
 
   .blur-top-right {
     background: #5CA038;
-    opacity: 0.4;
+    opacity: 0.2;
     filter: blur(200px);
     width: 493px;
     height: 469px;
@@ -958,7 +1009,7 @@ header {
 
   .blur-top-right-second {
     background: #F48020;
-    opacity: 0.4;
+    opacity: 0.2;
     filter: blur(200px);
     width: 344px;
     height: 327px;

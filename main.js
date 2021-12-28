@@ -1,22 +1,20 @@
 $(".teachers-container .items").slick({
-    infinite: true,
+    infinite: false,
     variableWidth: true,
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
     responsive: [{
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true
+          slidesToShow: 2,
+          slidesToScroll: 2,
         }
       }, {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true
         }
       }, {
         breakpoint: 300,
