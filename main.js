@@ -106,6 +106,10 @@ $(".register-submit-btn").click(function(){
       $("#email").val("");
       isLoading = false;
       $(".lds-ring").hide();
+      $(".success-msg").show();
+      setTimeout(function(){
+        $(".success-msg").hide();
+      }, 5000);
     });
   }
 })
