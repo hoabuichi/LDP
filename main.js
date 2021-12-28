@@ -22,14 +22,6 @@ $(".teachers-container .items").slick({
     }]
 });
 
-$('.teachers-container .prev').click(function(){
-  $('.teachers-container .items').slick('slickPrev');
-})
-
-$('.teachers-container .next').click(function(){
-  $('.teachers-container .items').slick('slickNext');
-})
-
 $('a[href*=\\#]:not([href=\\#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
     var target = $(this.hash);
