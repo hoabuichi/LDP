@@ -76,7 +76,7 @@ $(".register-submit-btn").click(function(){
     $(".lds-ring").show();
     isLoading = true;
     var form = new FormData();
-    form.append("Ngày đăng ký", new Date().toLocaleDateString("vi-VN"));
+    form.append("Thời gian đăng ký", new Date().toLocaleDateString("vi-VN") + " " + new Date().toLocaleTimeString("vi-VN"));
     form.append("Họ và tên", $("#fullname").val());
     form.append("Ngày sinh", new Date($("#birthday").val()).toLocaleDateString("vi-VN"));
     form.append("Trường học", $("#school").val());
