@@ -306,6 +306,11 @@ header {
   text-align: center;
   color: #333333;
 
+  a {
+    color: #333333;
+    text-decoration: none;
+  }
+
   @media(max-width: 768px) {
     font-size: 30px;
     line-height: 45px;
@@ -1074,6 +1079,7 @@ header {
 
   .main-content {
     display: flex;
+    align-items: flex-end;
 
     @media(max-width: 768px) {
       display: block;
@@ -1089,7 +1095,7 @@ header {
       transform: translateX(-60px);
 
       @media(max-width: 1024px) {
-        transform: translateX(-125px);
+        display: none;
       }
 
       @media(max-width: 768px) {
